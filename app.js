@@ -134,5 +134,7 @@ app.get("/about",function(req,res){
     res.render("about.ejs");
 })
 
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || 3000,function(){
+    console.log("server is running");
+});
 
